@@ -1,0 +1,123 @@
+html, body{
+    overflow: hidden;
+
+}
+
+#htmlId{
+    background-color: #282828;
+}
+
+#game {
+    border: 1px solid #000000;
+    background: url(../img/gameplayBackground.jpg) no-repeat center center;
+    background-size: cover;
+    width:auto;
+    height: auto;
+    /*margin-left: 30px;*/
+    transition:width 2s;
+}
+
+#ZoneMenu{
+    width: 100%;
+    display: inline-block;
+}
+
+#Canvas{
+    background: url(../img/squareClashTitle.jpg) no-repeat center center;
+    background-size: cover;
+    border: 1px solid #FFDD1B;
+    margin-left:300px;
+    margin-right:300px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+#MainMenu {
+    position: fixed;
+    top: 300px;
+    left: 500px;
+}
+
+.button{
+    border: 1px solid #68b6ce;
+    text-decoration: none;
+    display: block;
+    width: 150px;
+    height:70px;
+    margin: 0 auto;
+
+    color: #ffffff;
+    font-family: Lobster;
+    font-size: 3em;
+    text-shadow: -1px -1px 0 #68b6ce, 1px -1px 0 #68b6ce, -1px 1px 0 #68b6ce, 1px 1px 0 #2e2d2e;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+
+    background: #316d7a;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(bottom, #e11678 0%, #8a0a48 100%);
+    background-image: linear-gradient(to bottom, #FB1886 0%, #B30D5D 100%);
+
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.button:hover {
+    background-color: #B30D5D;
+    background-image: -webkit-linear-gradient(bottom, #B30D5D 0%, #FB1886 100%);
+    background-image: linear-gradient(to bottom, #B30D5D 0%, #FB1886 100%);
+
+    -webkit-animation: effetNeon 1.5s ease-in-out infinite alternate;
+    -moz-animation: effetNeon 1.5s ease-in-out infinite alternate;
+    animation: effetNeon 1.5s ease-in-out infinite alternate;
+
+    border: 1px solid #fff;
+
+}
+
+@-webkit-keyframes effetNeon {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff,0 0 40px #fff,  0 0 50px #FFDD1B, 0 0 70px #FFDD1B, 0 0 100px #FFDD1B,0 0 150px #FFDD1B;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #FFDD1B, 0 0 35px #FFDD1B,0 0 50px #FFDD1B, 0 0 75px #FFDD1B;
+    }
+}
+@keyframes effetNeon {
+    from {
+        text-shadow: 0 0 5px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 130px #FFDD1B, 0 0 70px #FFDD1B, 0 0 80px #FFDD1B;
+    }
+    to {
+        text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 70px #FFDD1B, 0 0 35px #FFDD1B, 0 0 40px #FFDD1B;
+    }
+}
+
+
+#zoneAttaquant{
+    background: url(../img/backgroundPanel.jpg) no-repeat center center;
+
+    box-shadow: 0px 0px 10px 0px #cdf1ff;
+    width: 80%;
+    list-style: none;
+    margin-left: 120px;
+
+}
+
+
+#listeMonstres li{
+   /* padding auto avec les cartes */
+    padding: 10px;
+    display: inline-block;
+}
+
+meter{
+    width: 100%;
+}
+
+meter::-webkit-meter-optimum-value {
+    background: #B30D5D; /* Green */
+}
