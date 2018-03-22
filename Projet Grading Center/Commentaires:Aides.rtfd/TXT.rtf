@@ -1,0 +1,114 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;\f2\fmodern\fcharset0 Courier;
+\f3\fnil\fcharset0 LucidaGrande;\f4\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue120;\red36\green36\blue36;\red251\green0\blue109;
+\red144\green1\blue18;\red15\green112\blue1;\red0\green0\blue255;\red31\green31\blue31;\red184\green14\blue61;
+\red247\green238\blue241;\red22\green25\blue31;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww25100\viewh14200\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \ul \ulc0 RANGE\ulnone : Range() Repr\'e9sente une plage de cellules, un \'ab\'a0objet Excel\'a0\'bb au m\'eame titre qu\'92un classeur, une feuille, une cellule.\
+Pour assigner une variable \'e0 un objet, on utilisera l\'92instruction \'ab\'a0SET\'a0\'bb.\
+\
+combobox1.clear \'91 vide la combobox1\
+\
+\ul Offset\ulnone  : Renvoie un objet Range qui repr\'e9sente une plage qui est d\'e9cal\'e9e par rapport \'e0 la plage sp\'e9cifi\'e9e\
+\
+\ul xlup/xldown\ulnone  : Cette fa\'e7on de proc\'e9der nous renvoyant le num\'e9ro de la derni\'e8re ligne non-vide de la colonne, pour obtenir la premi\'e8re ligne vide, il suffira de lui ajouter 1. exemple:\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs23\fsmilli11900 \cf2 \expnd0\expndtw0\kerning0
+Dim\cf3  maLigne \cf2 As\cf3  \cf2 Long\cf3  \
+maLigne \cf4 =\cf3  Range\cf4 (\cf5 "C"\cf3  \cf4 &\cf3  Rows\cf4 .\cf3 Count\cf4 ).\cf2 End\cf4 (\cf3 xlUp\cf4 ).\cf3 Row \cf4 +\cf3  1\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+\ul Randomize\ulnone  : Initialise le g\'e9n\'e9rateur de nombres al\'e9atoires.\
+Il utilise l\'92\'e9l\'e9ment Number pour initialiser le g\'e9n\'e9rateur de nombres al\'e9atoires de la fonction Rnd en lui donnant une nouvelle valeur initiale. Si l\'92\'e9l\'e9ment Number est omis, la valeur retourn\'e9e par l\'92horloge syst\'e8me sert de nouvelle valeur de d\'e9part.\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs26 \cf6 ' Initialise le g\'e9n\'e9rateur de nombre al\'e9atoire\cf0 \
+Randomize()\
+\cf6 ' G\'e9n\'e8re une valeur al\'e9atoire entre 1 et 6s\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf7 Dim\cf0  value \cf7 As\cf0  \cf7 Integer\cf0  = \cf7 CInt\cf0 (Int((6 * Rnd()) + 1))
+\f1\fs23\fsmilli11900 \cf3 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+Int() : Supprime la valeur fractionnaire de Number, et retourne la valeur enti\'e8re r\'e9sultante.\
+\
+\'91Msn.microsoft.com est le site de recherche pour les propri\'e9t\'e9s et objets disponibles sur vba.\
+\'92StackOverFlow est le site de recherche pour cette fonction.\
+\
+Commentaire de UniqueRandomGenerator()\
+\'91Utilises une fonctions boolean. On v\'e9rifie seulement les nombres qu\'92on a d\'e9j\'e0 ajout\'e9. les valeurs sont ajout\'e9es dans le tableau qui sera plac\'e9 sur la plage de cellule de la colonne ID dans la feuille \'ab\'a0ListeEtudiants\'a0\'bb\
+\
+Redim : R\'e9alloue l\'92espace de stockage d\'92une variable tableau. \
+\
+\'ab\'a0
+\f3\fs26 \cf8 Vous pouvez utiliser l'instruction 
+\f4\fs23\fsmilli11700 \cf9 \cb10 ReDim
+\f3\fs26 \cf8 \cb1  pour modifier la taille d'une ou plusieurs dimensions d'un tableau qui a d\'e9j\'e0 \'e9t\'e9 d\'e9clar\'e9. Si vous poss\'e9dez un grand tableau et que vous n'avez plus besoin de certains de ses \'e9l\'e9ments, 
+\f4\fs23\fsmilli11700 \cf9 \cb10 ReDim
+\f3\fs26 \cf8 \cb1  peut lib\'e9rer de la m\'e9moire en r\'e9duisant la taille du tableau. En revanche, si votre tableau a besoin d'\'e9l\'e9ments suppl\'e9mentaires, 
+\f4\fs23\fsmilli11700 \cf9 \cb10 ReDim
+\f3\fs26 \cf8 \cb1  peut les ajouter.\'a0\'bb\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 {{\NeXTGraphic Pasted Graphic.tiff \width9380 \height1060
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+Redimensionne le tableau Unique() (1 to N, 1 to 1 )correspond \'e0 la taille \'e0 2 dimension du tableau, 1to N taille de la 1ere dim et 1 to 1 taille de la 2eme Dim.\
+\
+\
+Select .. case : 
+\f3\fs26 \cf8 \expnd0\expndtw0\kerning0
+Ex\'e9cute un groupe d'instructions parmi plusieurs autres, selon la valeur d'une expression.\
+\
+\
+.\ul Select\ulnone  :  La m\'e9thode \'ab\'a0Select\'a0\'bb actives les feuilles et objets de la feuilles. Elle retourne l\'92object courant activ\'e9.\
+\
+\ul Worksheet\ulnone  : repr\'e9sente une feuille de calcul. \
+L\'92objet \ul Sheets\ulnone  contient toutes les feuilles du classeurs.\
+\ul ListeIndex\ulnone  : Permet de d\'e9terminer l\'92\'e9l\'e9ment s\'e9lectionn\'e9 dans une zone de liste ou une zone de liste modifiable.\
+.Count : Propri\'e9t\'e9 renvoie une valeur de type Long qui repr\'e9sente le nombre d\'92objets de la collection(ce qui est demand\'e9). Une collection est un ensemble ordonn\'e9e d\'92\'e9l\'e9ments pouvant \'eatre d\'e9sign\'e9 comme une unit\'e9.\
+\
+\
+\
+Code \'e0 ins\'e9rer dans \'ab\'a0ThisWorkBook\'a0\'bb\
+Sub workbook_open()\
+	Load InterfaceMenu.\
+	InterfaceMenu.Show\
+\pard\pardeftab720\partightenfactor0
+\cf8 End Sub\
+\
+Dim cel as Range\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf11 ins\'e9rer le code suivant dans la proc\'e9dure du click bouton de l'interface supprimer dipl\'f4me.\
+ligneFin = Range("F65000").end(xlup).Row\
+Sheets("ListeEtudiants").Select\
+For cel in Range("F2:F" & ligneFin) \
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs26 \cf8 if cel.Value = comboBoxDegree.value Then\
+	cel.value = \'ab\'a0N/A\'a0\'bb\
+End if\
+Next cel\
+\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf8 >>>>>>>>>>>\
+Utilis\'e9 l\'92interface:\
+\
+1.Cr\'e9er un dipl\'f4me\
+2.Ajouter un/des \'e9tudiant(s) \'e0 la base de donn\'e9es. Renseignez tous les champs.\
+L\'92\'e9tudiant sera automatiquement ajout\'e9 au dipl\'f4me \'e0 condition que le dipl\'f4me a \'e9t\'e9 pr\'e9alablement s\'e9lectionn\'e9.\
+3. Ajouter une note \'e0 un \'e9tudiant. Renseigner les champs. Pour conna\'eetre l\'92ID de l\'92\'e9tudiants, cliquez sur le bouton consulter la base de donn\'e9es. \
+4. Consulter un dipl\'f4me. Renseignez le champs dipl\'f4mes en haut \'e0 gauche puis cliquez sur consulter pour afficher le contenu du dipl\'f4me. Vous pouvez effectuer une recherche par nom en ins\'e9rant le nom de famille de l\'92\'e9tudiant dans le champs texte en bas \'e0 gauche. La moyenne g\'e9n\'e9rale du dipl\'f4me est affich\'e9e dans le champs en bas \'e0 droite de l\'92interface.\
+5. Changer le nom du dipl\'f4me. Dans l\'92interface gestion dipl\'f4me, renseignez le dipl\'f4me, puis cliquez sur changer le nom, une fen\'eatre apparaitra, s\'e9lectionnez le nouveau nom du dipl\'f4me, cliquez Ok pour valider.\
+6. Supprimer un \'e9tudiants d\'92un dipl\'f4me.\
+7.Supprimer un dipl\'f4me.\
+8.Supprimer l\'92\'e9tudiant de la base de donn\'e9es.}

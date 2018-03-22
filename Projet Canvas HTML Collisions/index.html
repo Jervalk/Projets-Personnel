@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="MyCanvasGame.css">
+    <script type="text/javascript" src="MyCanvasGameCircle.js"></script>
+
+    <title>JS Bin</title>
+</head>
+<body onload="init(), animationCercle(50), changerCouleur('tableau')";>
+
+<canvas width="500" height="500" id="myCanvas"></canvas><br>
+<label>
+        Choisissez le nombre d'elements : <input type="number" min="0" max="1500" value="50" width="10" oninput="animationCercle(this.value);">
+</label><br>
+<label>
+        Vitesse :
+        <input type="button" value="+" onclick="changerVitessePlus()">
+</label>
+<label>
+    <input type="button" value="-" onclick="changerVitesseMoins()">
+</label><br>
+
+<label>
+    Couleurs prédéfinies:
+
+    <select id="toto" oninput="changerCouleur(value)";>
+        <option value="1" selected="selected">Couleurs prédéfinies & 1</option>
+        <option value="2">Couleurs prédéfinies & 2</option>
+    </select>
+
+</label>
+
+<h1>Jeremy Primat [licence 3] - TP Canvas héritage, class, tableau, évènements, collisions</h1>
+<h2>Placez la souris sur un cercle ! </h2>
+
+</body>
+</html>
