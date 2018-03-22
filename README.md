@@ -3,7 +3,7 @@
 
 Projet VBA - GRADING CENTER : 
 
-1.Créer un diplôme
+1. Créer un diplôme
 2.Ajouter un/des étudiant(s) à la base de données. Renseignez tous les champs.
 L’étudiant sera automatiquement ajouté au diplôme à condition que le diplôme a été préalablement sélectionné.
 3. Ajouter une note à un étudiant. Renseigner les champs. Pour connaître l’ID de l’étudiants, cliquez sur le bouton consulter la base de données. 
